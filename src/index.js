@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import {Router, Route} from 'react-router-dom';
+import configStore from './store/store';
+import createHistory from 'history/createBrowserHistory';
+
+const store = configStore;
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store = {store}>
+    <Router history = {createHistory()}>
+      <Route path = "/" component={App}/>
+    </Router>
+  </Provider>,
+
   document.getElementById('root')
 );
 

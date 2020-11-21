@@ -1,0 +1,3 @@
+export {
+    getArticles
+} from './articles';
