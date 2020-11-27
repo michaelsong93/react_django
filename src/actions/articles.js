@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as actionTypes from './actionTypes';
 
-export const getArticles_ = (articleList) = ({
+export const getArticles_ = (articleList) => ({
     type: actionTypes.FETCH_ARTICLE_LIST,
     target: articleList
 });
